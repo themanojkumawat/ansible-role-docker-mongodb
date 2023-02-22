@@ -1,0 +1,18 @@
+---
+mongodb_version: "6.0"
+mongodb_cluster_name: mongo
+mongodb_bind_ip: 0.0.0.0
+mongodb_bind_port: 27017
+
+mongodb_user: mongodb
+mongodb_group: mongodb
+
+mount_path: "/data"
+mongodb_opt_dir: "/opt/{{ mongodb_cluster_name }}"
+mongodb_data_dir: "{{ mount_path }}/{{ mongodb_cluster_name }}"
+
+MONGO_INITDB_DATABASE: prod
+MONGO_INITDB_ROOT_PASSWORD: MdrKmTZNZgtZqxPSmmzbY
+MONGODB_USER: app
+MONGODB_PASSWORD: xWYQUsNIfYPxRPftVsYdU
+MONGODB_DATABASE: prod

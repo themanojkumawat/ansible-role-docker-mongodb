@@ -1,0 +1,14 @@
+---
+
+- name: create mongodb dirs
+  file:
+    path: "{{ item|safe|trim }}"
+    state: directory
+    owner: "{{ mongodb_user }}"
+    group: "{{ mongodb_group }}"
+    recurse: true
+  changed_when: false
+  with_items:
+    - "{{ mongodb_opt_dir }}"
+    - "{{ mongodb_data_dir }}"
+
